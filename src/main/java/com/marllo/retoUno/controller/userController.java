@@ -27,7 +27,7 @@ public class userController {
         return userService.registrar(user);
     }
 
-    @GetMapping("/{email}{password}")
+    @GetMapping("/{email}/{password}")
     public User autenticarUsuario(@PathVariable("email") String email, @PathVariable("password") String password){
         return userService.autenticarUsuario(email, password);
     }
